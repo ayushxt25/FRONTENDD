@@ -1,0 +1,96 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogging Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>My Blog</h1>
+        <nav class="auth-buttons">
+            <button id="login-btn" aria-label="Login to your account">Login</button>
+            <button id="signup-btn" aria-label="Sign up for an account">Sign Up</button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="blog-feed">
+            <h2>Recent Posts</h2>
+
+            <article class="post">
+                <h3>Post Title 1</h3>
+                <p class="post-content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia...
+                </p>
+                <button class="view-comments-btn">View Comments</button>
+
+                <div class="comments-section">
+                    <h4>Comments:</h4>
+                    <div class="comment">
+                        <p><strong>Jane:</strong> This is a great post!</p>
+                    </div>
+
+                    <textarea class="comment-input" placeholder="Add a comment" aria-label="Write a comment"></textarea>
+                    <button class="comment-submit-btn">Submit</button>
+                </div>
+            </article>
+
+        
+        </section>
+
+        
+        <aside class="sidebar">
+            <section class="categories">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="#">Tech</a></li>
+                    <li><a href="#">Lifestyle</a></li>
+                    <li><a href="#">Travel</a></li>
+                    <li><a href="#">Food</a></li>
+                </ul>
+            </section>
+
+            <section class="popular-posts">
+                <h3>Popular Posts</h3>
+                <ul>
+                    <li><a href="#">How to Build a Blog</a></li>
+                    <li><a href="#">Top 10 Travel Destinations</a></li>
+                    <li><a href="#">Best Coding Practices</a></li>
+                    <li><a href="#">Healthy Eating Tips</a></li>
+                </ul>
+            </section>
+        </aside>
+    </main>
+
+    
+    <div id="auth-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" aria-label="Close authentication modal">&times;</button>
+            <h2 id="auth-modal-title">Login</h2>
+
+            <form id="auth-form">
+                <fieldset>
+                    <legend>Login Details</legend>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" placeholder="Enter your username" required>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+
+                    <button type="submit" id="auth-submit-btn">Submit</button>
+                </fieldset>
+            </form>
+
+            <p id="auth-toggle-msg">
+                Don't have an account? <span id="toggle-signup">Sign Up</span>
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
